@@ -7,10 +7,10 @@ import { Infobox } from "./infobox";
 import { AdBanner } from "./ad-banner";
 
 interface ArticleProps {
-  data: ArticleData;
+  character: ArticleData;
 }
 
-export function Article({ data }: ArticleProps) {
+export function Article({ character: data }: ArticleProps) {
   return (
     <article className="max-w-5xl">
       {/* Article Header */}
@@ -176,7 +176,7 @@ export function Article({ data }: ArticleProps) {
         {/* Sidebar */}
         <aside className="lg:w-80 shrink-0 space-y-4">
           {/* Infobox */}
-          <Infobox data={data.infobox} title={data.title} status={data.status} />
+          <Infobox character={data} />
 
           {/* Related Articles */}
           <div className="border border-primary/30 bg-card">

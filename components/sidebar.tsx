@@ -38,6 +38,12 @@ const familyLinks = [
 export function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const [networkStatus, setNetworkStatus] = useState(true);
+  const [onlineUsers, setOnlineUsers] = useState(777);
+  
+  // Generate random users only on client side to avoid hydration mismatch
+  useState(() => {
+    setOnlineUsers(Math.floor(Math.random() * 1000 + 500));
+  });
 
   return (
     <>
@@ -127,7 +133,7 @@ export function Sidebar() {
         <div className="absolute bottom-0 left-0 right-0 p-3 border-t border-primary/20 bg-secondary/50">
           <div className="flex items-center justify-between text-xs font-mono">
             <span className="text-muted-foreground">Usuários Online:</span>
-            <span className="text-success">{Math.floor(Math.random() * 1000 + 500)}</span>
+            <span className="text-success">{onlineUsers}</span>
           </div>
           <div className="flex items-center justify-between text-xs font-mono mt-1">
             <span className="text-muted-foreground">NetWatch Ativo:</span>

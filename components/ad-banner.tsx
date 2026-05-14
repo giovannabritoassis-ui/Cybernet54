@@ -4,7 +4,8 @@ import { useState } from "react";
 import { X, AlertTriangle, Skull, CreditCard, Shield, Zap, ChevronRight } from "lucide-react";
 
 interface AdBannerProps {
-  variant?: "sidebar" | "inline" | "banner";
+  variant?: "sidebar" | "inline" | "banner" | "header";
+  position?: "top" | "side" | "bottom"; // Alias for variant
 }
 
 const ads = [
@@ -64,7 +65,9 @@ const ads = [
   },
 ];
 
-export function AdBanner({ variant = "sidebar" }: AdBannerProps) {
+export function AdBanner({ variant, position }: AdBannerProps) {
+  // Map position to variant for backwards compatibility
+  const effectiveVariant = variant || (position === "top" || position === "bottom" ? "banner" : position === "side" ? "sidebar" : "sidebar");
   const [currentAd, setCurrentAd] = useState(() => Math.floor(Math.random() * ads.length));
   const [showPopup, setShowPopup] = useState(false);
   const ad = ads[currentAd];
@@ -78,7 +81,7 @@ export function AdBanner({ variant = "sidebar" }: AdBannerProps) {
     setCurrentAd(Math.floor(Math.random() * ads.length));
   };
 
-  if (variant === "banner") {
+  if (effectiveVariant === "banner" || effectiveVariant === "header") {
     return (
       <>
         <div
@@ -104,7 +107,7 @@ export function AdBanner({ variant = "sidebar" }: AdBannerProps) {
     );
   }
 
-  if (variant === "inline") {
+  if (effectiveVariant === "inline") {
     return (
       <>
         <div

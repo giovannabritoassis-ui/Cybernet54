@@ -18,6 +18,12 @@
   --color-danger: #ff0033;
   --color-success: #00ff66;
   
+  /* Cyber colors for Martin page */
+  --color-cyber-red: #ff0033;
+  --color-cyber-green: #00ff66;
+  --color-cyber-blue: #00ffff;
+  --color-cyber-yellow: #ffcc00;
+  
   --font-sans: "Rajdhani", system-ui, sans-serif;
   --font-mono: "Share Tech Mono", monospace;
   --font-display: "Orbitron", sans-serif;

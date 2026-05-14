@@ -3,12 +3,11 @@
 import { useState, useEffect, useCallback } from "react";
 import { Sidebar } from "@/components/sidebar";
 import { Navbar } from "@/components/navbar";
-import { Infobox } from "@/components/infobox";
 import { Article } from "@/components/article";
 import { AdBanner } from "@/components/ad-banner";
 import { Footer } from "@/components/footer";
 import { PopupSystem } from "@/components/popup-system";
-import { martinNikolic } from "@/lib/data";
+import { martinArticle } from "@/lib/data";
 
 const CORRECT_PASSWORD = "GHOST_PROTOCOL_7734";
 
@@ -96,7 +95,7 @@ function LockedContent() {
       <div className="flex">
         <Sidebar />
         
-        <main className="flex-1 p-6 lg:p-8">
+        <main className="flex-1 lg:ml-64 p-6 lg:p-8">
           <div className="max-w-4xl mx-auto">
             {/* Warning Banner */}
             <div className="border-2 border-cyber-red bg-cyber-red/10 p-6 mb-8 relative overflow-hidden">
@@ -253,7 +252,7 @@ function UnlockedContent() {
       <div className="flex">
         <Sidebar />
         
-        <main className="flex-1 p-6 lg:p-8">
+        <main className="flex-1 lg:ml-64 p-6 lg:p-8">
           <div className="max-w-6xl mx-auto">
             {/* Success Banner */}
             <div className="border-2 border-cyber-green bg-cyber-green/10 p-4 mb-6 flex items-center justify-between">
@@ -279,22 +278,9 @@ function UnlockedContent() {
               )}
             </div>
             
-            <AdBanner position="top" />
-            
-            <div className="flex flex-col lg:flex-row gap-8">
-              <div className="flex-1">
-                <Article character={martinNikolic} />
-              </div>
-              
-              <aside className="lg:w-80">
-                <Infobox character={martinNikolic} />
-                <div className="mt-6">
-                  <AdBanner position="side" />
-                </div>
-              </aside>
-            </div>
-            
-            <AdBanner position="bottom" />
+            <AdBanner variant="banner" />
+            <Article character={martinArticle} />
+            <AdBanner variant="banner" />
           </div>
         </main>
       </div>

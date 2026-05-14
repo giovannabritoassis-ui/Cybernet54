@@ -2,15 +2,16 @@
 
 import Link from "next/link";
 import { User } from "lucide-react";
-import type { InfoboxData } from "@/lib/types";
+import type { ArticleData } from "@/lib/types";
 
 interface InfoboxProps {
-  data: InfoboxData;
-  title: string;
-  status?: "public" | "restricted" | "classified";
+  character: ArticleData;
 }
 
-export function Infobox({ data, title, status = "public" }: InfoboxProps) {
+export function Infobox({ character }: InfoboxProps) {
+  const data = character.infobox;
+  const title = character.title;
+  const status = character.status || "public";
   const statusColors = {
     public: "border-primary/50 bg-card",
     restricted: "border-warning/50 bg-warning/5",
