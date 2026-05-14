@@ -9,7 +9,7 @@ import { Footer } from "@/components/footer";
 import { PopupSystem } from "@/components/popup-system";
 import { martinArticle } from "@/lib/data";
 
-const CORRECT_PASSWORD = "GHOST_PROTOCOL_7734";
+const CORRECT_PASSWORD = "7C-19B";
 
 function GlitchText({ text, className }: { text: string; className?: string }) {
   const [glitchedText, setGlitchedText] = useState(text);
