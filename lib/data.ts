@@ -559,36 +559,42 @@ export const adsData: AdData[] = [
     title: "TRAUMA TEAM PREMIUM",
     subtitle: "Sua vida vale mais que sua conta bancária?",
     type: "trauma",
+    clickAction: "popup",
   },
   {
     id: "arasaka-security",
     title: "ARASAKA SECURITY",
     subtitle: "Proteção de nível corporativo para sua família",
     type: "arasaka",
+    clickAction: "popup",
   },
   {
     id: "militech-insurance",
     title: "MILITECH COMBAT INSURANCE",
     subtitle: "Porque acidentes acontecem... frequentemente",
     type: "militech",
+    clickAction: "popup",
   },
   {
     id: "black-market",
     title: "CYBERWARE DE QUALIDADE",
     subtitle: "Clique aqui para ofertas EXCLUSIVAS",
     type: "blackmarket",
+    clickAction: "popup",
   },
   {
     id: "netrunner-vpn",
     title: "GHOST.NET VPN",
     subtitle: "NetWatch não pode ver o que não existe",
     type: "generic",
+    clickAction: "none",
   },
   {
     id: "braindance-xxx",
     title: "BD EXCLUSIVOS",
     subtitle: "Experiências que você não encontra em outro lugar",
     type: "generic",
+    clickAction: "popup",
   },
 ];
 
