@@ -7,7 +7,7 @@ import { Article } from "@/components/article";
 import { AdBanner } from "@/components/ad-banner";
 import { Footer } from "@/components/footer";
 import { PopupSystem } from "@/components/popup-system";
-import { danielaNikolic } from "@/lib/data";
+import { danielaArticle } from "@/lib/data";
 
 export default function DanielaNikolicPage() {
   return (
@@ -24,11 +24,11 @@ export default function DanielaNikolicPage() {
             
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="flex-1">
-                <Article character={danielaNikolic} />
+                <Article character={danielaArticle} />
               </div>
               
               <aside className="lg:w-80">
-                <Infobox character={danielaNikolic} />
+                <Infobox character={danielaArticle} />
                 <div className="mt-6">
                   <AdBanner position="side" />
                 </div>

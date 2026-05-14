@@ -7,7 +7,7 @@ import { Article } from "@/components/article";
 import { AdBanner } from "@/components/ad-banner";
 import { Footer } from "@/components/footer";
 import { PopupSystem } from "@/components/popup-system";
-import { sophiaNikolic } from "@/lib/data";
+import { sophiaArticle } from "@/lib/data";
 
 export default function SophiaNikolicPage() {
   return (
@@ -24,11 +24,11 @@ export default function SophiaNikolicPage() {
             
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="flex-1">
-                <Article character={sophiaNikolic} />
+                <Article character={sophiaArticle} />
               </div>
               
               <aside className="lg:w-80">
-                <Infobox character={sophiaNikolic} />
+                <Infobox character={sophiaArticle} />
                 <div className="mt-6">
                   <AdBanner position="side" />
                 </div>

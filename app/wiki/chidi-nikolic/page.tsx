@@ -7,7 +7,7 @@ import { Article } from "@/components/article";
 import { AdBanner } from "@/components/ad-banner";
 import { Footer } from "@/components/footer";
 import { PopupSystem } from "@/components/popup-system";
-import { chidiNikolic } from "@/lib/data";
+import { chidiArticle } from "@/lib/data";
 
 export default function ChidiNikolicPage() {
   return (
@@ -26,12 +26,12 @@ export default function ChidiNikolicPage() {
             <div className="flex flex-col lg:flex-row gap-8">
               {/* Main Content */}
               <div className="flex-1">
-                <Article character={chidiNikolic} />
+                <Article character={chidiArticle} />
               </div>
               
               {/* Infobox */}
               <aside className="lg:w-80">
-                <Infobox character={chidiNikolic} />
+                <Infobox character={chidiArticle} />
                 
                 {/* Side Ad */}
                 <div className="mt-6">

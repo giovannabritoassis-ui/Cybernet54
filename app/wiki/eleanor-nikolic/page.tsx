@@ -7,7 +7,7 @@ import { Article } from "@/components/article";
 import { AdBanner } from "@/components/ad-banner";
 import { Footer } from "@/components/footer";
 import { PopupSystem } from "@/components/popup-system";
-import { eleanorNikolic } from "@/lib/data";
+import { eleanorArticle } from "@/lib/data";
 
 export default function EleanorNikolicPage() {
   return (
@@ -24,11 +24,11 @@ export default function EleanorNikolicPage() {
             
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="flex-1">
-                <Article character={eleanorNikolic} />
+                <Article character={eleanorArticle} />
               </div>
               
               <aside className="lg:w-80">
-                <Infobox character={eleanorNikolic} />
+                <Infobox character={eleanorArticle} />
                 <div className="mt-6">
                   <AdBanner position="side" />
                 </div>
